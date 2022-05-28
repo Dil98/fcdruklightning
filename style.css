@@ -104,7 +104,7 @@ header{
 .nav{
     position:fixed;
     top: 0;
-    background-color: rgb(90, 59, 59);
+    background: linear-gradient(90deg,#cd122d 0,#154284);
     color: #eeee;
     width:60%;
     right: -100%;
@@ -164,7 +164,7 @@ header{
     text-shadow: -1px 2px 5px rgba(0,0,0,0.86);  }
     
   .overlay h1 {
-    font-size: 3vw;
+    font-size: 50px;
     letter-spacing: 0px;
     margin: 0 0 5px;
   }
@@ -187,7 +187,7 @@ header{
 /* Effect */
 div > span {
 	opacity: 1;
-    font-size: 8vw;
+    font-size: 150px;
 }
 #I {
 	opacity: 1;
@@ -422,6 +422,15 @@ div > span {
 	.team-name{
 		margin-top: 300px;
 	}
+	div > span {
+		opacity: 1;
+		font-size: 70px;
+	}
+	.overlay h1 {
+		font-size: 30px;
+		letter-spacing: 0px;
+		margin: 0 0 5px;
+	  }
 }
 
 .container .owl-carousel .bg-info{
@@ -513,7 +522,7 @@ div > span {
   }
   /* Schedule */
   
-.flex-container {
+/* .flex-container {
 	display: flex;
 	flex-direction: row;
 	font-size: 30px;
@@ -533,13 +542,25 @@ div > span {
   }
   
   /* Responsive layout - makes a one column-layout instead of two-column layout */
-  @media (max-width: 800px) {
+  /* @media (max-width: 800px) {
 	.flex-container {
 	  flex-direction: column;
 	}
-  }
-  
+  } */
+   
 /* New */
+.schedule{
+	min-height: 320px;
+	height: 100%;
+	border-radius: 10px;
+	background: url('images/schedule.jpg')
+	no-repeat center;
+	background-size:cover;
+  }
+#tournament{
+	background: -webkit-linear-gradient(90deg,#cd122d 0,#154284);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;}
 h3{
 	text-align: center;
 }
@@ -557,7 +578,7 @@ h3{
 	  padding: 35px 0px;
 	}
 	  p{
-		font-size: 22px;
+		font-size: 20px;
 	  }
 	
 	.img{
@@ -569,3 +590,28 @@ h3{
 	  background-size:cover;
 	}
 
+/* Social */
+.fa {
+	padding: 20px;
+	font-size: 30px;
+	width: 50px;
+	text-align: center;
+	text-decoration: none;
+	margin: 5px 2px;
+  }
+  
+  .fa:hover {
+	  opacity: 0.7;
+  }
+  
+  .fa-facebook {
+	background: #3B5998;
+	color: white;
+  }
+  .fa-instagram {
+	background: #125688;
+	color: white;
+  }
+  .social{
+	  margin: 20px;
+  }
