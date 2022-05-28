@@ -1,0 +1,571 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+:root {
+	--white:#f1f1f1
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+	scroll-behavior: smooth;;
+  }
+body{
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+}
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+header{
+    display:flex;
+    background: linear-gradient(90deg,#cd122d 0,#154284);
+    justify-content: space-around;
+    padding:1rem;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 70px;
+    height: 60px;
+    margin-right: 10px;
+    /*-webkit-filter: invert(100%);
+    filter: invert(100%);
+    -webkit-filter: invert(100%);
+    */
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+}
+.nav-items{
+    margin: 0 8px;
+
+}
+
+.nav-links{
+    padding: 10px;
+    color: #eee;
+    font-size: 0.9em;
+    font-weight: 500;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.nav-links:hover{
+    background-color: #00adb5;
+}
+
+.header-toggle,
+.header-close{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    header{
+        height: 48px;
+        justify-content: space-between;
+        padding: 0 28px;
+    }
+    .logo img{
+        width: 50px;
+		height: 100%;
+    }
+    .header-toggle{
+        display: inline;
+        color: #eee;
+        font-size: 24px;
+    }
+    .header-close{
+        position: absolute;
+        right: 24px;
+        display:block;
+        font-size: 24px;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+}
+.header-close:hover{
+    background-color: #00adb5
+}
+.nav{
+    position:fixed;
+    top: 0;
+    background-color: rgb(90, 59, 59);
+    color: #eeee;
+    width:60%;
+    right: -100%;
+    height: 100vh;
+    padding: 24px 0;
+    z-index: 100;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+    border-radius:0 0 0 50%;
+    -webkit-border-radius:0 0 0 50%;
+    -moz-border-radius:0 0 0 50%;
+    -ms-border-radius:0 0 0 50%;
+    -o-border-radius:0 0 0 50%;
+}
+.nav-list{
+    display: flex;
+    flex-direction: column;
+}
+.nav-items{
+    margin: 2rem 0;
+}
+.nav-list a:hover{
+    background-color: aquamarine;
+}
+.show{
+    right: 0;
+}
+}
+
+
+.big-image {
+    height: 763px;
+    width: 100vw;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url("fcteam.jpeg");
+	max-width: 100%;
+    margin-bottom: 50px;
+  }
+  
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-shadow: -1px 2px 5px rgba(0,0,0,0.86);  }
+    
+  .overlay h1 {
+    font-size: 3vw;
+    letter-spacing: 0px;
+    margin: 0 0 5px;
+  }
+  h2{
+	  text-align: center;
+	  background: -webkit-linear-gradient(90deg,#cd122d 0,#154284);
+	  -webkit-background-clip: text;
+	  -webkit-text-fill-color: transparent;
+	}
+  
+  .overlay p {
+    margin: 0;
+    font-size: 3vw;
+    font-style: italic;
+  }
+  /* Players Cards */
+/* Float four columns side by side */
+
+
+/* Effect */
+div > span {
+	opacity: 1;
+    font-size: 8vw;
+}
+#I {
+	opacity: 1;
+	animation: flickerI 2s linear  reverse infinite;
+}
+#I::after {
+	content: '';
+	width: 150%;
+	-webkit-box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+	-moz-box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+	box-shadow: -35px 0px 60px 8px rgba(255,255,255,1);
+}
+#L, #G {
+	animation: flickerLG 2s linear reverse infinite;
+	position: relative;
+}
+#L::after, 
+#L::before  {
+	content:' ';
+	width: 100px;
+	height: 100px;
+	background: var(--white);
+	position: absolute;
+	top: -50%;
+	left: 100%;
+	border-radius: 100%;
+	opacity: 0.05;
+	filter: blur(10px);
+}
+#L::after {
+	width: 200px;
+	height: 200px;
+	top: -150%;
+	left: -5%;
+	opacity: 0.1;
+	filter: blur(10px);
+}
+#H {
+	animation: flickerH 2s linear reverse infinite
+}
+
+#T {
+	animation: flickerH 2s linear reverse infinite
+}
+
+@keyframes flickerI {
+	0% {
+		opacity: 0.4;
+	}
+	5% {
+		opacity: 0.5;
+	}
+	10% {
+		opacity: 0.6;
+	}
+	15% {
+		opacity: 0.85;
+	}
+	25% {
+		opacity: 0.5;
+	}
+	30% {
+		opacity: 1;
+	}
+	35% {
+		opacity: 0.1;
+	}
+	40% {
+		opacity: 0.25;
+	}
+	45% {
+		opacity: 0.5;
+	}
+	60% {
+		opacity: 1;
+	}
+	70% {
+		opacity: 0.85;
+	}
+	80% {
+		opacity: 0.4;
+	}
+	90% {
+		opacity: 0.5;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes flickerLG {
+	0% {
+		opacity: 0.19;
+	}
+	5% {
+		opacity: 0.2;
+	}
+	10% {
+		opacity: 0.25;
+	}
+	15% {
+		opacity: 0.35;
+	}
+	25% {
+		opacity: 0.2;
+	}
+	30% {
+		opacity: 0.4;
+	}
+	35% {
+		opacity: 0.1;
+	}
+	40% {
+		opacity: 0.25;
+	}
+	45% {
+		opacity: 0.2;
+	}
+	60% {
+		opacity: 0.4;
+	}
+	70% {
+		opacity: 0.35;
+	}
+	80% {
+		opacity: 0.4;
+	}
+	90% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 0.4;
+	}
+}
+
+@keyframes flickerH {
+	0% {
+		opacity: 0.15;
+	}
+	5% {
+		opacity: 0.2;
+	}
+	10% {
+		opacity: 0.12;
+	}
+	15% {
+		opacity: 0.2;
+	}
+	25% {
+		opacity: 0.15;
+	}
+	30% {
+		opacity: 0.4;
+	}
+	35% {
+		opacity: 0.05;
+	}
+	40% {
+		opacity: 0.12;
+	}
+	45% {
+		opacity: 0.15;
+	}
+	60% {
+		opacity: 0.3;
+	}
+	70% {
+		opacity: 0.2;
+	}
+	80% {
+		opacity: 0.3;
+	}
+	90% {
+		opacity: 0.18;
+	}
+	100% {
+		opacity: 0.3;
+	}
+}
+
+@keyframes flickerT {
+	0% {
+		opacity: 0.01;
+	}
+	5% {
+		opacity: 0.05;
+	}
+	10% {
+		opacity: 0.03;
+	}
+	15% {
+		opacity: 0.1;
+	}
+	25% {
+		opacity: 0.07;
+	}
+	30% {
+		opacity: 0.1;
+	}
+	35% {
+		opacity: 0.05;
+	}
+	40% {
+		opacity: 0.06;
+	}
+	45% {
+		opacity: 0.1;
+	}
+	60% {
+		opacity: 0.;
+	}
+	70% {
+		opacity: 0.1;
+	}
+	80% {
+		opacity: 0.;
+	}
+	90% {
+		opacity: 0.0;
+	}
+	100% {
+		opacity: 0.1;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.overlay{
+		display: flex;
+		align-items: center;
+		justify-content: center;	
+	}
+	.team-name{
+		margin-top: 300px;
+	}
+}
+
+.container .owl-carousel .bg-info{
+	background:linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+.bg-info:hover img{
+	transform: translate(0, -10px);
+
+}
+#player-name{
+	color: rgb(100, 87, 27) !important;
+	text-align: center;
+	font-family: 'Poppins', sans-serif;
+	font-size: 15px;
+	text-shadow: -2px 3px 3px rgba(0,0,0,0.45);
+}
+.player-info{
+	background:linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+.schedule{
+	padding: 30px;
+}
+
+.col-text {
+	height:20em;
+  }
+  .grid-flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	flex-direction: row; 
+	-webkit-flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-webkit-justify-content: space-around;
+  }
+  .col {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+  }
+  .col-left {
+	-webkit-box-ordinal-group:-1;
+	-webkit-order: -1;
+	-ms-flex-order: -1;
+	order: -1;
+  }
+  .col-text{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+  .Aligner-item {
+	width: 75%;
+  }
+  .col-image {
+	background-size: cover;
+	background-position:center center;
+	height: 500px;
+  }
+  
+  @media (max-width: 640px) {
+	.grid-flex {
+	  height: 40em;
+	  display: -webkit-flex;
+	  -webkit-flex-direction: column;
+	  flex-direction: column; 
+	 }
+	.col {
+	  order:vertical;
+	}
+	.col-left {
+	  -webkit-box-ordinal-group:0;
+	  -webkit-order: 0;
+	  -ms-flex-order: 0;
+	  order: 0;
+	}
+	.col-text div p {
+	  padding: 1em;
+	}
+	.Aligner-item {
+	  width: 90%;
+	}
+  }
+  /* Schedule */
+  
+.flex-container {
+	display: flex;
+	flex-direction: row;
+	font-size: 30px;
+	text-align: center;
+  }
+  
+  .flex-item-left {
+	background-color: #f1f1f1;
+	padding: 10px;
+	flex: 50%;
+  }
+  
+  .flex-item-right {
+	background-color: dodgerblue;
+	padding: 10px;
+	flex: 50%;
+  }
+  
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+  @media (max-width: 800px) {
+	.flex-container {
+	  flex-direction: column;
+	}
+  }
+  
+/* New */
+h3{
+	text-align: center;
+}
+/* About us */
+.half-half-image-text{
+	padding: 70px 0px;
+}
+	h1{
+	  /* color: #800000; */
+	}
+	.content{
+	  height: 100%;
+	  display:flex;
+	  align-items: center;
+	  padding: 35px 0px;
+	}
+	  p{
+		font-size: 22px;
+	  }
+	
+	.img{
+	  min-height: 320px;
+	  height: 100%;
+	  border-radius: 10px;
+	  background: url('images/team.jpg')
+	  no-repeat center;
+	  background-size:cover;
+	}
+
